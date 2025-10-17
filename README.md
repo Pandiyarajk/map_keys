@@ -13,8 +13,8 @@ A Python-based Windows application that allows you to map keyboard key combinati
 
 ## Requirements
 
-- Windows OS (7/8/10/11)
-- Python 3.8+ (for running from source)
+- **Windows 11** (specifically optimized for Windows 11)
+- **Python 3.13** (for running from source)
 - Administrator privileges (required for keyboard hook functionality)
 
 ## Installation
@@ -113,8 +113,7 @@ The executable will be created in the `distribution/` directory.
 ## GitHub Actions Workflow
 
 This project includes a GitHub Actions workflow that:
-- Automatically builds the Windows executable on push/PR
-- Runs tests (if available)
+- Automatically builds the Windows executable on push/PR using Python 3.13 on Windows 11 (windows-2022)
 - Creates releases when tags are pushed
 - Uploads build artifacts
 
@@ -197,4 +196,4 @@ Future enhancements:
 
 ---
 
-**Note**: This application is designed for Windows only due to OS-specific keyboard hook requirements.
+**Note**: This application is specifically designed and tested for Windows 11 with Python 3.13 due to OS-specific keyboard hook requirements and optimized encoding handling.

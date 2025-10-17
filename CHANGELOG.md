@@ -13,7 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - This resolves the build failure: `'charmap' codec can't encode character '\u2713'`
 
 ### Changed
+- **Updated platform requirements to Python 3.13 on Windows 11 only**
+- Updated GitHub Actions workflow to use Python 3.13 and windows-2022 (Windows 11)
+- Removed test job from CI/CD pipeline (tests not required)
 - Updated README.md with correct GitHub repository URL (Pandiyarajk/map_keys)
+- Updated README.md to reflect Python 3.13 and Windows 11 specific requirements
 - Added build script compatibility note in README.md
 
 ---
@@ -40,6 +44,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Delete and refresh mapping capabilities
 
 ### Requirements
-- Windows OS (7/8/10/11)
-- Python 3.8+ (for running from source)
+- Windows 11 (specifically optimized for Windows 11)
+- Python 3.13 (for running from source)
 - Administrator privileges for keyboard hook functionality
