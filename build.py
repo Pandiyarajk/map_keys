@@ -72,13 +72,9 @@ def create_distribution():
     if os.path.exists('README.md'):
         shutil.copy('README.md', dist_dir / 'README.md')
     
-    # Copy CHANGE_LOG if exists
-    if os.path.exists('CHANGE_LOG.md'):
-        shutil.copy('CHANGE_LOG.md', dist_dir / 'CHANGE_LOG.md')
-    
     # Create a sample config
     sample_config = dist_dir / 'key_mappings.json.sample'
-    with open(sample_config, 'w') as f:
+    with open(sample_config, 'w', encoding='utf-8') as f:
         f.write('''{
   "mappings": {
     "ctrl+shift+n": "C:\\\\Windows\\\\System32\\\\notepad.exe",
