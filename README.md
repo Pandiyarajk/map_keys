@@ -13,15 +13,15 @@ A Python-based Windows application that allows you to map keyboard key combinati
 
 ## Requirements
 
-- Windows OS (7/8/10/11)
-- Python 3.8+ (for running from source)
+- **Windows 11** (specifically optimized for Windows 11)
+- **Python 3.13** (for running from source)
 - Administrator privileges (required for keyboard hook functionality)
 
 ## Installation
 
 ### Option 1: Download Pre-built Executable (Recommended)
 
-1. Go to the [Releases](https://github.com/yourusername/map_keys/releases) page
+1. Go to the [Releases](https://github.com/Pandiyarajk/map_keys/releases) page
 2. Download the latest `KeyMapper.exe`
 3. Run the executable (you may need to run as administrator)
 
@@ -29,7 +29,7 @@ A Python-based Windows application that allows you to map keyboard key combinati
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/map_keys.git
+   git clone https://github.com/Pandiyarajk/map_keys.git
    cd map_keys
    ```
 
@@ -108,11 +108,12 @@ python build.py
 
 The executable will be created in the `distribution/` directory.
 
+**Note**: The build script has been optimized for Windows compatibility and uses ASCII characters for output to avoid encoding issues on systems with different code pages (e.g., cp1252).
+
 ## GitHub Actions Workflow
 
 This project includes a GitHub Actions workflow that:
-- Automatically builds the Windows executable on push/PR
-- Runs tests (if available)
+- Automatically builds the Windows executable on push/PR using Python 3.13 on Windows 11 (windows-2022)
 - Creates releases when tags are pushed
 - Uploads build artifacts
 
@@ -195,4 +196,4 @@ Future enhancements:
 
 ---
 
-**Note**: This application is designed for Windows only due to OS-specific keyboard hook requirements.
+**Note**: This application is specifically designed and tested for Windows 11 with Python 3.13 due to OS-specific keyboard hook requirements and optimized encoding handling.

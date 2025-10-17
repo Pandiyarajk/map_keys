@@ -1,0 +1,49 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Fixed
+- Fixed UnicodeEncodeError in build.py that occurred on Windows systems with cp1252 encoding
+  - Replaced Unicode checkmark (✓) and cross (✗) characters with ASCII alternatives ([SUCCESS] and [FAILED])
+  - This resolves the build failure: `'charmap' codec can't encode character '\u2713'`
+
+### Changed
+- **Updated platform requirements to Python 3.13 on Windows 11 only**
+- Updated GitHub Actions workflow to use Python 3.13 and windows-2022 (Windows 11)
+- Removed test job from CI/CD pipeline (tests not required)
+- Updated README.md with correct GitHub repository URL (Pandiyarajk/map_keys)
+- Updated README.md to reflect Python 3.13 and Windows 11 specific requirements
+- Added build script compatibility note in README.md
+
+---
+
+## [1.0.0] - Initial Release
+
+### Added
+- Key mapping functionality for Windows
+- User-friendly GUI built with Tkinter
+- Persistent configuration storage in JSON format
+- Ability to restore original mappings
+- Real-time activation/deactivation of hotkeys
+- Visual feedback for active mappings
+- Build script for creating standalone executable
+- GitHub Actions workflow for automated builds
+- Comprehensive documentation and troubleshooting guide
+
+### Features
+- Map keyboard shortcuts to launch any Windows application
+- Support for modifier keys (Ctrl, Shift, Alt, Win)
+- Support for function keys (F1-F12)
+- Browse functionality for easy application selection
+- Status indicator for mapping state
+- Delete and refresh mapping capabilities
+
+### Requirements
+- Windows 11 (specifically optimized for Windows 11)
+- Python 3.13 (for running from source)
+- Administrator privileges for keyboard hook functionality
