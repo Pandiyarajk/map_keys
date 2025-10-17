@@ -21,7 +21,7 @@ A Python-based Windows application that allows you to map keyboard key combinati
 
 ### Option 1: Download Pre-built Executable (Recommended)
 
-1. Go to the [Releases](https://github.com/yourusername/map_keys/releases) page
+1. Go to the [Releases](https://github.com/Pandiyarajk/map_keys/releases) page
 2. Download the latest `KeyMapper.exe`
 3. Run the executable (you may need to run as administrator)
 
@@ -29,7 +29,7 @@ A Python-based Windows application that allows you to map keyboard key combinati
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/map_keys.git
+   git clone https://github.com/Pandiyarajk/map_keys.git
    cd map_keys
    ```
 
@@ -107,6 +107,8 @@ python build.py
 ```
 
 The executable will be created in the `distribution/` directory.
+
+**Note**: The build script has been optimized for Windows compatibility and uses ASCII characters for output to avoid encoding issues on systems with different code pages (e.g., cp1252).
 
 ## GitHub Actions Workflow
 

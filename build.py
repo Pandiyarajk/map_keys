@@ -46,11 +46,11 @@ def build_executable():
     try:
         result = subprocess.run(cmd, check=True, capture_output=True, text=True)
         print(result.stdout)
-        print("\n✓ Build successful!")
+        print("\n[SUCCESS] Build successful!")
         print(f"Executable created: dist/KeyMapper.exe")
         return True
     except subprocess.CalledProcessError as e:
-        print(f"\n✗ Build failed!")
+        print(f"\n[FAILED] Build failed!")
         print(e.stderr)
         return False
 
@@ -84,7 +84,7 @@ def create_distribution():
 }
 ''')
     
-    print(f"\n✓ Distribution package created in '{dist_dir}' directory")
+    print(f"\n[SUCCESS] Distribution package created in '{dist_dir}' directory")
     return True
 
 
